@@ -1,0 +1,47 @@
+@mixin line-setting($w,$h,$br,$t,$l,$trx,$try) {
+    width: $w;
+    height: $h;
+    border: $br solid black;
+    position: absolute;
+    top: $t;
+    left: $l;
+    transform: translate($trx,$try);
+    transition: 1s;
+}
+
+// $br_line:solid;
+// $br_color:black;
+
+
+body{
+    margin: 0%;
+    padding:0;
+}
+
+*{
+    box-sizing: border-box;
+    font: 500 20px/1.2 'Noto Sans TC',"Lato", sans-serif; 
+    color: rgb(255, 0, 0);
+}
+
+.H{
+    height: 500px;
+    width: 500px;
+    background-color: rgb(238, 255, 0);
+    position: relative;
+
+    &:hover .line {
+        transform: translate(-50%,-50%) rotate(-45deg);  
+    }
+
+    &:hover .line1{
+        transform: translate(-50%,-50%) rotate(45deg);
+    }
+
+    .line1, .line{
+        @include line-setting(300px,20px,1px,50%,50%,-50%,-50%);
+        
+    }
+
+
+}

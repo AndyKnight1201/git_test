@@ -1,0 +1,58 @@
+.box {
+  background-color: aqua;
+  width: 100px;
+  height: 100px;
+}
+
+.box:hover {
+  background-color: #ffa600;
+}
+
+.box .box {
+  background-color: black;
+  width: 70px;
+  height: 70px;
+}
+
+.box .box .box2 {
+  background-color: magenta;
+  width: 50px;
+  height: 50px;
+}
+
+.box .box .box2:hover {
+  background-color: #ffa600;
+}
+
+.test1 {
+  width: 100px;
+  height: 100px;
+  text-align: unset;
+  background-color: wheat;
+}
+
+ul .list-item1 {
+  width: 100px;
+  height: 102px;
+}
+
+ul .list-item2 {
+  width: 200px;
+  height: 104px;
+}
+
+ul .list-item3 {
+  width: 300px;
+  height: 106px;
+}
+
+ul .list-item4 {
+  width: 400px;
+  height: 108px;
+}
+
+ul .list-item5 {
+  width: 500px;
+  height: 110px;
+}
+/*# sourceMappingURL=try1.css.map */

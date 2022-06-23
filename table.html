@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet" media="all">
+
+    <style>
+   .A{
+       width: 300px;
+       height: 20px;
+       background-color: aquamarine;
+       border: 1px solid black;
+       position: relative;
+   }
+
+   .A::after{
+       content: "321321";
+       display: inline-block;
+       width: 100px;
+       height: 20px;
+       background-color: rgb(255, 127, 127);
+       border: 1px solid black;
+       position:absolute;
+       left: 0;
+      
+   }
+
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <div class="A"></div>
+        <div class="A"></div>
+        <div class="A"></div>
+        <div class="A"></div>
+        <div class="A"></div>
+    </table>
+    
+</body>
+</html>

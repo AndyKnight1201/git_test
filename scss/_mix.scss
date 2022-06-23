@@ -1,0 +1,12 @@
+@import "var";
+
+@mixin test($w,$h,$align:center) {
+    width: $w;
+    height: $h;
+    text-align: $align;
+}
+
+@mixin size_x($w,$h,$align:center) {
+    width: $w;
+    height: $h;
+}

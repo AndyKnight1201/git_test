@@ -1,0 +1,95 @@
+@mixin po-ab($top,$left,$trx,$try,$ro) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    transform: translate($trx,$try) $ro;
+}
+
+%po-ab{
+    @include po-ab(50%,50%,-50%,-50%,rotate(0deg));
+}
+
+
+// 版本1~故意用變數抓rotate
+// .H{
+//     height: 500px;
+//     width: 500px;
+//     background-color: rgb(238, 255, 0);
+//     position: relative;
+
+//     &:focus .line1{
+//         @include po-ab(50%,50%,-50%,-50%,rotate(-45deg));
+//     }
+
+//     &:focus .line3{
+//         @include po-ab(50%,50%,-50%,-50%,rotate(45deg));
+//     }
+
+//     &:focus .line2{
+//         display: none;
+//     }
+
+//     .lin{
+//         width: 300px;
+//         height: 20px;
+//         border: 1px solid black;
+//     }
+
+//     .line1{
+//         @include po-ab(30%,50%,-50%,-50%,rotate(0deg));
+//     }
+
+//     .line2{
+//         @include po-ab(50%,50%,-50%,-50%,rotate(0deg));
+//     }
+
+//     .line3{
+//         @include po-ab(70%,50%,-50%,-50%,rotate(0deg));
+//     }
+    
+    
+// }
+
+
+
+
+.H{
+    height: 500px;
+    width: 500px;
+    background-color: rgb(238, 255, 0);
+    position: relative;
+
+    &:focus .line1{
+        @include po-ab(50%,50%,-50%,-50%,rotate(-45deg));
+    }
+
+    &:focus .line3{
+        @include po-ab(50%,50%,-50%,-50%,rotate(45deg));
+    }
+
+    &:focus .line2{
+        display: none;
+    }
+
+    .lin{
+        width: 300px;
+        height: 20px;
+        border: 1px solid black;
+    }
+
+    .line1{
+        @extend %po-ab;
+        top:30%
+    }
+
+    .line2{
+        @extend %po-ab;
+    }
+
+    .line3{
+        @extend %po-ab;
+        top:70%
+    }
+    
+    
+}

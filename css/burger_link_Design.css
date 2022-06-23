@@ -1,0 +1,111 @@
+* {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.box {
+  width: 500px;
+  height: 500px;
+  background-color: #ff9100;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  position: relative;
+}
+
+.box:hover {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+  background-color: black;
+}
+
+.box .line4 {
+  width: 1000px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-55deg);
+          transform: translate(-50%, -50%) rotate(-55deg);
+  -webkit-box-shadow: 0 0 50px 20px white;
+          box-shadow: 0 0 50px 20px white;
+  opacity: 0;
+}
+
+.box:hover .line4 {
+  width: 500px;
+  height: 30px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 0px 0px white;
+          box-shadow: 0 0 0px 0px white;
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.box .line1 {
+  width: 350px;
+  height: 30px;
+  background-color: #fffb00;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.box:hover .line1 {
+  background-color: #6fffff;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(35deg);
+          transform: translate(-50%, -50%) rotate(35deg);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.box .line2 {
+  width: 350px;
+  height: 30px;
+  background-color: #fffb00;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.box:hover .line2 {
+  background-color: #6fffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(35deg);
+          transform: translate(-50%, -50%) rotate(35deg);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.box .line3 {
+  width: 350px;
+  height: 30px;
+  background-color: #fffb00;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.box:hover .line3 {
+  background-color: #6fffff;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(35deg);
+          transform: translate(-50%, -50%) rotate(35deg);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+/*# sourceMappingURL=burger_link_Design.css.map */

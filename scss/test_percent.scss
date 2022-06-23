@@ -1,0 +1,16 @@
+$h:100px;
+$w:200px;
+
+
+%A{
+    width: $w;
+    height:$h ;
+    background-color:aqua;
+
+    
+}
+
+
+.box{
+    @extend %A;
+}

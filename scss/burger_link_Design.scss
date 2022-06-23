@@ -1,0 +1,70 @@
+*{
+    transition: 0.3s;
+}
+@mixin we-hi($w,$h,$bc) {
+    width: $w;
+    height: $h;
+    background-color: $bc;
+}
+
+@mixin po-ab($t,$l,$trx,$try,$ro:0deg) {
+    position: absolute;
+    top: $t;
+    left: $l;
+    transform: translate($trx,$try) rotate($ro); 
+}
+
+
+
+
+.box{
+    @include we-hi(500px,500px,rgb(255, 145, 0));
+    transform: translate(50%,50%);
+    position: relative;
+
+    &:hover{
+        transition-delay: .3s;
+        background-color: black;
+    }
+
+        .line4{
+            @include we-hi(1000px,30px,rgb(255, 255, 255));
+            @include po-ab(50%,50%,-50%,-50%,-55deg); 
+            box-shadow:0 0 50px 20px rgb(255, 255, 255);
+            opacity: 0;
+        }
+
+        &:hover .line4{
+            @include we-hi(500px,30px,rgb(255, 255, 255));
+            box-shadow:0 0 0px 0px rgb(255, 255, 255); 
+            opacity: 1;
+            transition-delay: 0.3s;
+        }
+
+    @for $line from 1 to 4{
+        .line#{$line}{
+            @include we-hi(350px,30px,rgb(255, 251, 0));
+            @include po-ab(35% + 15% *$line - 15%,50%,-50%,-50%);            
+        }
+
+        &:hover .line#{$line}{
+            background-color: rgb(111, 255, 255);
+            @include po-ab(30% + 20% *$line - 20%,50%,-50%,-50%,35deg);
+            transition-delay:$line*0.1s ;
+            
+        }
+        
+
+        // 本來打算設計成上下兩條線道中間結合先留的進場程式碼
+            // .line5{
+            //     @include po-ab(150%,-20%,-50%,-50%,-55deg); 
+            // }
+            // &:hover .line5{
+            //     @include we-hi(500px,30px,rgb(255, 0, 0));
+            //     @include po-ab(50%,50%,-50%,-50%,-55deg); 
+            //     // transition: 2s;
+            //     transition-delay: 0.2s;
+            // }
+ 
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAaA,AATA,IASI,CATF;EACE,KAAK,EAJN,KAAK;EAKJ,MAAM,EANP,KAAK;EAOJ,gBAAgB,EAAC,IAAI;CAGxB",
+    "sources": [
+        "../scss/test_percent.scss"
+    ],
+    "names": [],
+    "file": "test_percent.css"
+}
